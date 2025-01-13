@@ -1,5 +1,5 @@
 SERVER_PORT=3000
 SERVER_HOST=localhost
-MONGODB_URI=mongodb://admin:tjAHohqrrGXvSg6@192.168.1.250:27017/?authSource=P45C4L
+MONGODB_URI=mongodb://localhost:27017
 SALT_ROUNDS=8
-SECRET_KEY=7Gz1FmAZ1VDLtya
+SECRET_KEY=your-secret-key
