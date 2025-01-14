@@ -10,18 +10,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    email: {
-        type: String,
-        required: false,
-        default: null
-    },
-    profile_picture: {
-        type: String,
-        required: false,
-        default: 'assets/images/default-profile-picture.webp'
-    },
     role: {
         type: String,
+        enum: ['student', 'parent', 'teacher', 'manager', 'admin'],
         required: true,
         default: 'student'
     }
