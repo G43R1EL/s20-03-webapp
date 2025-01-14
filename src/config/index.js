@@ -14,16 +14,14 @@ const config = {
     // Authentication configuration
     auth: {
         secret: process.env.SECRET_KEY || 'secret-key',
+        expiresIn: process.env.EXPIRES_IN || '1h',
         salt: () => {
             if (process.env.SALT_ROUNDS) {
                 return parseInt(process.env.SALT_ROUNDS);
             } else  {
                 return 10;
             }
-        }
-    },
-    files: {
-        uploadDir: 'uploads'
+        },
     }
 }
 

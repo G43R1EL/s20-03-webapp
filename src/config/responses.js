@@ -7,9 +7,13 @@ const responses = {
         status: 404,
         message: 'Not Found'
     },
-    notImplemented: {
-        status: 501,
-        message: 'Not Implemented'
+    methodNotAllowed: {
+        status: 405,
+        message: 'Method Not Allowed'
+    },
+    unauthorized: {
+        status: 401,
+        message: 'Unauthorized'
     },
     placeholder: (message = '') => {
         return {

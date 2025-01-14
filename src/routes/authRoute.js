@@ -1,13 +1,10 @@
 const router = require('express').Router();
+const { userRegistration, userLogin } = require('../controllers/authController');
 const responses = require('../config/responses')
 
-router.post('/login', (req, res) => {
-    res.status(responses.placeholder().status).json(responses.placeholder('You are in the login page.'))
-});
+router.post('/login', userLogin);
 
-router.post('/register', (req, res) => {
-    res.status(responses.placeholder().status).json(responses.placeholder('You are in the register page.'))
-});
+router.post('/register', userRegistration);
 
 router.patch('/update', (req, res) => {
     res.status(responses.placeholder().status).json(responses.placeholder('You are in the update page.'))
@@ -22,7 +19,7 @@ router.head('/authenticate', (req, res) => {
 });
 
 router.get('*', (req, res) => {
-    res.status(responses.notImplemented.status).json(responses.notImplemented)
+    res.status(responses.methodNotAllowed.status).json(responses.methodNotAllowed)
 })
 
 module.exports = router
